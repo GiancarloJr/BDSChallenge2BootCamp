@@ -7,7 +7,7 @@ import java.util.Set;
 
 
 @Entity
-@Table(name="tb_reviews")
+@Table(name="tb_review")
 public class Review {
 
     @Id
@@ -20,7 +20,7 @@ public class Review {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "review")
+    @JoinColumn(name = "review_id")
     private Movie movie;
 
 

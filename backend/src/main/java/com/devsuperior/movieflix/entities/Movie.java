@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="tb_movies")
+@Table(name="tb_movie")
 public class Movie {
 
     @Id
@@ -18,11 +18,11 @@ public class Movie {
     private String imgUrl;
     private String synopsis;
 
-    @OneToMany(mappedBy = "movie")
+    @OneToMany(mappedBy = "review_id")
     private List<Review> review = new ArrayList<>();
 
     @ManyToOne
-    @JoinColumn(name = "movie_id")
+    @JoinColumn(name = "genre_id")
     private Genre genre;
 
     public Movie(){
