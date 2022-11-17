@@ -23,8 +23,8 @@ public class UserResource {
 
     @GetMapping("/profile")
     public ResponseEntity<UserDTO> findUser(){
-        User user = (User) userService.loadUserByUsername(authService.authenticated().getUsername());
-        return ResponseEntity.ok().body(new UserDTO(user));
+      //  User user = (User) userService.loadUserByUsername(authService.authenticated().getUsername());
+        return ResponseEntity.ok().body(userService.findUser());
     }
 
 }
