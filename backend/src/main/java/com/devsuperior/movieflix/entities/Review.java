@@ -20,7 +20,7 @@ public class Review {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "review_id")
+    @JoinColumn(name = "movie_id")
     private Movie movie;
 
 

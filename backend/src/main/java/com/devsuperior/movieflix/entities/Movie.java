@@ -18,7 +18,7 @@ public class Movie {
     private String imgUrl;
     private String synopsis;
 
-    @OneToMany(mappedBy = "review_id")
+    @OneToMany(mappedBy = "movie")
     private List<Review> review = new ArrayList<>();
 
     @ManyToOne
